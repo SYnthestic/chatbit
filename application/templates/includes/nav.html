@@ -1,10 +1,29 @@
 <header>
-    <nav>
-        <ul class="nav">
-            <li class="nav-item">
+    <table class="Go_To">
+        <tr>
+            <td><nav>
+                <ul class="nav">
+                <li class="nav-item">
                 <a href="/home" class="nav-link 
                 {% if index %}active{% endif %}">Home</a></li>
-        </ul>
-    </nav>
+                </ul>
+                </nav></td>
+                <td><nav>
+                    <ul class="nav">
+                    <li class="nav-item">
+                        <a href="/chatbottalk" class="nav-link 
+                        {% if index %}active{% endif %}">Talk to Chatbot</a></li>
+                    </ul>
+                    </nav></td>
+            <td><nav>
+                <ul class="nav">
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link 
+                    {% if index %}active{% endif %}">Log Out</a></li>
+                </ul>
+                </nav></td>
+                
+        </tr>
+    </table>
 </header>
    

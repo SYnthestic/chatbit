@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/botimg.png')}}">
     <title>{{title}}</title>
     <link rel="stylesheet"
 href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.c
@@ -13,7 +14,7 @@ crossorigin="anonymous">
 <body>
     <div class="container-fluid text-center top-container">
         <img src=
-        "{{ url_for('static',filename='images/botimg.png')}}">
+        "{{ url_for('static',filename='images/botimg.png')}}", width=200, height=200>
     </div>
     <div class="container">
 
@@ -22,6 +23,6 @@ crossorigin="anonymous">
         {% block content %}
         {% endblock %}
     </div>
-    {% include "includes/footer.html" %}
+    {% include "includes/main_footer.html" %}
 </body>
 </html>

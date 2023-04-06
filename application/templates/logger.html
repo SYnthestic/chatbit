@@ -1,0 +1,48 @@
+<title>{{title}}</title>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-
+Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+crossorigin="anonymous">
+<link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/botimg.png')}}">
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/main.css')}}" />
+<title>Log In</title>
+</head>
+<body>
+    <div class="container-fluid text-center top-container">
+        <img src=
+        "{{ url_for('static',filename='images/botimg.png')}}", width=200, height=200>
+        </div>
+
+
+        <h2>
+            Please Log In here! Thank you!
+        </h2>
+        <div class="login-form">
+            <form action="">   
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="username" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="password" required="required">
+                </div>
+                <div class="form-group">
+                    <nav>
+                        <ul class="nav">
+                        <li class="nav-item">
+                        <a href="/loggedin" class="nav-link 
+                        {% if index %}active{% endif %}">Log In</a></li>
+                        </nav>
+                </div>
+                <div class="clearfix">
+                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me?</label>
+                </div>        
+            </form> 
+    
+        </div>
+    
+        <footer>
+    {% include "includes/login_footer.html" %}
+        </footer>
+    
+</body>

@@ -1,0 +1,49 @@
+<title>{{title}}</title>
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.c
+ss" integrity="sha384-
+Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+crossorigin="anonymous">
+<link rel="stylesheet"
+href="{{ url_for('static',filename='css/main.css')}}" />
+<link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='images/botimg.png')}}">
+</head>
+<body>
+    <div class="container-fluid text-center top-container">
+        <img src=
+        "{{ url_for('static',filename='images/botimg.png')}}", width=200, height=200>
+        </div>
+        <div class="container">
+            {% include "includes/nav.html" %}
+        </div>
+    <h1>FAQ</h1>
+    <h2>Who are we?</h2>
+    <p>안녕하세요!!! We are a group of AI developers who set about creating an AI chatbot for the company QueueCut for their use in their app</p>
+    <h2>What is a chatbot?</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{{ url_for('static',filename='images/images.png')}}" width="400" class="img-fluid" alt="Food">
+            <!-- Source: https://d2vrvpw63099lz.cloudfront.net/do-i-need-a-chatbot/header-chat-box.png -->
+        </div>
+        <div class="col-sm-6">
+            <p>A chatbot, short for "chat robot", is a computer program that simulates human conversation, either through text or voice interactions, with users via messaging applications, websites, mobile apps or through the telephone.</p>
+            <p>Chatbots use natural language processing (NLP) and machine learning (ML) algorithms to understand user inputs and respond to them in a human-like manner.</p>
+            <p>They can perform a wide range of tasks, from providing customer support and answering frequently asked questions to ordering food, booking appointments, and even controlling smart home devices.</p>
+            <p>For more information, 
+                    <a href="https://en.wikipedia.org/wiki/Chatbot#:~:text=A%20chatbot%20or%20chatterbot%20is,with%20a%20live%20human%20agent.">Refer to this link</a></p>
+        </div>
+    </div>
+
+
+    <h2>What is the model used?</h2>
+    <p>The model used is a Convolutional Neural Network. What it does is train with multi layers, just like a real brain would on various sub-samples of your input,
+        and uses averaging to improve the predictive accuracy and control over-fitting. Over-fitting is a bane to any Data Analyst/Scientist. As such, we strive hard to 
+       improve the accuracy of our machine learning models, without also overfitting. And Convolutional Neural Networks are a good candidate, other than Recurrent Neural Networks that is!!</p>
+
+
+
+    <footer>
+            {% include "includes/main_footer.html" %}
+    </footer>
+        
+</body>

@@ -1,0 +1,2 @@
+def ABC():
+    return("A")

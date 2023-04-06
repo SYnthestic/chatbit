@@ -2,6 +2,39 @@
 {% extends "layout.html" %}
 <!-- The block content replace the one encapsulated in layout.html -->
 {% block content %}
+<head>
+<!-- JavaScript code to generate chatbot message -->
+<script>
+    function activateChatbot():
+        // get references to button and chat window elements
+        const chatButton = document.getElementById("chatbot-button");
+        const chatWindow = document.getElementById("chatbot-window");
+    
+        // add event listener to button for click event
+        chatButton.addEventListener("click", () => {
+        // generate chatbot message
+        var message = "Hello! How can I assist you today?";
+    
+        // create new chatbot message element
+        const chatMessage = document.createElement("div");
+        chatMessage.classList.add("chat-message");
+        chatMessage.textContent = message;
+    
+        // append chatbot message to chat window
+        chatWindow.appendChild(chatMessage);
+    });
+</script>
+<title>Chatbot Talks</title>
+</head>
 <div class="row">
 <h1>Welcome to QueueCut Chatbot</h1>
-{% endblock %}
+<p>Please talk to the bot below for any issues with QueueCut!</p>
+
+<button type="button" style="right" id='chatbot-button'>
+    <img src= "{{ url_for('static',filename='images/istockphoto-1010001882-612x612.jpg')}}", width=200, height=200, class='bottalk', onclick = "activateChatbot()">
+</button>
+<div id="chatbot-window"></div>
+
+<footer>
+    {% endblock %}
+</footer>

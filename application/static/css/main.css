@@ -1,5 +1,7 @@
 
-
+* {
+    transition: 1.0s
+}
 
 html, head {
     font-family: 'Courier New', Courier, monospace;
@@ -240,6 +242,14 @@ a:hover {
 
 /* input */
 
+button {
+    float: right;
+}
+
+button.chatbot-button {
+    float: right;
+}
+
 label:hover {
     font-weight: bold;
 }
@@ -263,4 +273,9 @@ select:hover {
 img:hover {
     width:300px;
     height:300px;
+}
+
+img.bottalk:hover {
+    width:250px;
+    height:250px;
 }
